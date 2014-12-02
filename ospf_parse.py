@@ -1,3 +1,5 @@
+#!/bin/env python3
+
 import os
 import re
 import pprint
@@ -27,11 +29,12 @@ pattern_dict = {'Int': r'^(.*) is up, line protocol is up',
 
 if __name__ == "__main__":
     
-    file = 'ospf_data.txt'
+    file_name = 'ospf_data.txt'
     
-    os.chdir(r'C:/Dump/PyNet')
+    os.chdir(r'class7/OSPF_DATA')
     
-    ospf_interfaces = ospf_data(file)
+    
+    ospf_interfaces = ospf_data(file_name)
     ospf_interfaces.pop(0)
 
     
